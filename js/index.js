@@ -25,11 +25,20 @@
 //     })
 
     
-    document.getElementById('item-2').addEventListener('click',function(event){
-        console.log(7);
-        event.stopPropagation();
-    })
+    // document.getElementById('item-2').addEventListener('click',function(event){
+    //     console.log(7);
+    //     event.stopPropagation();
+    // })
 
-document.getElementById('list-ul').addEventListener('click',function(){
-    console.log(100);
-})
+// document.getElementById('list-ul').addEventListener('click',function(){
+//     console.log(100);
+// })
+
+
+
+const abc = document.getElementsByClassName('item');
+for(const ab of abc){
+    ab.addEventListener('click',function(event){
+        event.target.parentNode.removeChild(event.target)
+    })
+}
